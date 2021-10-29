@@ -6,6 +6,4 @@ const successRes = (res, data, status = 200) => {
   })
 }
 
-module.exports = {
-  successRes,
-}
+module.exports = successRes

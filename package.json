@@ -18,7 +18,8 @@
     "joi": "^17.4.2",
     "mongoose": "^6.0.12",
     "needle": "^3.0.0",
-    "swapi-node": "^0.7.0"
+    "swapi-node": "^0.7.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
