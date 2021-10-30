@@ -2,7 +2,7 @@ const { NotFound } = require("http-errors")
 const { successRes, encodingToEwok } = require("../utils")
 const needle = require("needle")
 const url = require("url")
-const API_BASE_URL = process.env.API_BASE_URL
+const API_BASE_URL = "https://swapi.dev/api"
 
 const getAllPeople = async (req, res) => {
   const apiRes = await needle("get", `${API_BASE_URL}/people`)
@@ -24,7 +24,6 @@ const getPeopleById = async (req, res) => {
     `${API_BASE_URL}/people/${id}?${newParams}`
   )
   const data = apiRes.body
-
   if (!data) {
     throw new NotFound("Not found")
   } else if (value.length !== 0) {
